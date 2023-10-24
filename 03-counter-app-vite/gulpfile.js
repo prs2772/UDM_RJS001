@@ -1,12 +1,29 @@
-const gulp = require('gulp');
-const shell = require('gulp-shell');
+const { src, dest, watch, series } = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+// Imagenes
+const imagemin = require('gulp-imagemin');//Version 7.1.0
 
-gulp.task('compile-sass', shell.task([
-  'node-sass ./src/styles/styles.scss ./src/styles.css --watch'
-]));
+//Compile CSS Dev
+function css(done) {
+  src('src/styles/styles.scss') // Source
+      .pipe( sass() ) // Compiling...
+      .pipe( dest('src/') ) // Save
+  done();
+}
+function dev(done) {
+  watch('src/styles/*.scss', css);
+  done();
+}
+//Compile Images Min size Production
+function imagenes(done) {
+  src('src/assets/img/**/*')
+      .pipe( imagemin({ optimizationLevel: 3}) )
+      .pipe( dest('dist/img') )
+  done();
+}
 
-gulp.task('vite', shell.task([
-  'vite'
-]));
+exports.css = css;
+exports.dev = dev;
+exports.imagenes = imagenes;
 
-gulp.task('default', gulp.parallel('compile-sass', 'vite'));
+exports.default = series(imagenes,css, dev);
