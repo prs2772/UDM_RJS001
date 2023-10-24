@@ -25,6 +25,7 @@
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
+    "prop-types": "^15.8.1",
     "sass": "^1.69.4",
     "vite": "^4.4.5"
   }

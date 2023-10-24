@@ -68,3 +68,42 @@ img {
 ul, ol {
   list-style: none;
 }
+
+.counter-app {
+  width: 80vw;
+  padding-top: 8rem;
+  margin: 0 auto;
+}
+.counter-app > h1 {
+  font-size: 5rem;
+  width: 30%;
+  margin: 0 auto;
+}
+.counter-app > h2 {
+  font-size: 3rem;
+  padding: 4rem 0;
+  width: 30%;
+  margin: 0 auto;
+}
+.counter-app button {
+  padding: 0.6rem 1rem;
+  margin: 2rem;
+}
+.counter-app__container-buttons--main {
+  font-size: 3rem;
+  width: 30%;
+  margin: 0 auto;
+}
+.counter-app__button--add {
+  background-color: forestgreen;
+}
+.counter-app__button--substract {
+  background-color: indianred;
+}
+.counter-app__button--reset {
+  background-color: indigo;
+}
+
+html {
+  background-color: #17183b;
+}

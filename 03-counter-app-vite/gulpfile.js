@@ -3,8 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const { spawn } = require('child_process');
 
 // Imagenes
-const imagemin = require('gulp-imagemin');//Version 7.1.0
-const shell = require('gulp-shell');
+const imagemin = require('gulp-imagemin');//Version 7.1.0 
 
 //Compile CSS Dev
 function css(done) {
