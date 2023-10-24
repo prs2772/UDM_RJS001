@@ -4,10 +4,8 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
-    "gl": "gulp",
-    "dev": "vite",
-    "sas": "node-sass ./src/styles/styles.scss ./src/styles.css --watch",
-    "build": "vite build",
+    "dev": "gulp",
+    "build": "yarn build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -26,6 +24,8 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.4",
     "vite": "^4.4.5"
   }
 }
