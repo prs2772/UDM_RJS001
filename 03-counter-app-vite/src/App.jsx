@@ -6,22 +6,23 @@ const newMessage = {
   "eichTwo": "H2",
 }
 
-const App = ({ username, description, age=22 }) => {
+const App = ({ title, subTitle='', age=22 }) => {
   return(
     <>
-      <h1>Code!</h1>
+      <h1 data-testid="test-title">{title}</h1>
       <p>{message}</p>
       <p>{JSON.stringify(newMessage)}</p>
-      <p>{`Username: ${username}`}</p>
-      <p>{`Description: ${description}`}</p>
+      <p>{`Title: ${title}`}</p>
+      <p>{`${subTitle}`}</p>
+      <p>{`${subTitle}`}</p>
       <p>{`Age: ${age}`}</p>
     </>
   );
 }
 
 App.propTypes = {
-  username: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   age: PropTypes.number,
 }
 App.defaultPropTypes = {

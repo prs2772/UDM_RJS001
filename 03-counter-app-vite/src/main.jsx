@@ -9,6 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/*<HelloWorldApp />*/}
     {/*<App username={'123'} description={'MIB Agent'} />*/}
-    <CounterApp value={20}/>
+    {/*<CounterApp value={20}/>*/}
+    <App title={'Test App'} subTitle='Subtitle'/>
   </React.StrictMode>
 );
